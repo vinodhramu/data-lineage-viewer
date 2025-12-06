@@ -1,42 +1,47 @@
-# React Flow Clone - Pro Features Prototype
+# Data Lineage Viewer
 
-A React Flow clone that uses the free version of React Flow and implements pro features using custom code.
+An interactive web-based tool for visualizing and exploring data lineage relationships between tables, with support for column-level dependency tracking and bidirectional navigation.
+
+![Data Lineage Viewer](https://img.shields.io/badge/React-18-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![React Flow](https://img.shields.io/badge/React_Flow-11-green)
 
 ## 🚀 Features
 
-### ✅ Implemented (Base)
-- **React Flow Integration**: Using the free version (v11.11.0)
-- **Custom Dark Theme**: Modern dark UI with custom styling
-- **Interactive Canvas**: Zoom, pan, drag nodes
-- **Node Connections**: Connect nodes with animated edges
-- **Controls**: Zoom controls, fit view, minimap
-- **Background**: Customizable dot/grid patterns
+### ✅ Implemented
+- **Bidirectional Lineage Exploration** - Navigate both upstream (sources) and downstream (consumers) dependencies with dedicated expand buttons
+- **Column-Level Tracking** - Visualize transformations and dependencies at the column level with column-to-column edge connections
+- **Dynamic Layout Engine** - Automatic positioning with parent-child alignment, order-based sorting, and collision prevention
+- **Flexible Layouts** - Switch between horizontal (left-right) and vertical (top-bottom) views
+- **Interactive Expansion** - On-demand lazy loading of lineage branches - only load what you need
+- **Smart Collapse** - Branch-specific collapsing preserves unrelated lineage paths
+- **Rich Metadata Display** - Show table schemas, row counts, owners, stakeholders, and tags
+- **Expand/Collapse All** - Quick navigation to see complete lineage or collapse to root
+- **Animated Edges** - Visual distinction between table-level and column-level connections
+- **Interactive Minimap** - Navigate large lineage graphs with color-coded nodes
 
-### 🎯 Phase 1 (In Development)
-- **Node Resizing**: Interactive resize handles on nodes
-- **Custom Minimap**: Enhanced minimap with custom node styling
-- **Node Grouping**: Visual grouping and container support
-
-### 📋 Planned Features (Phase 2 & 3)
-- Sub-flows / Nested Flows
-- Advanced Edge Routing (pathfinding, collision avoidance)
-- Node Alignment & Distribution Tools
-- Advanced Selection Tools (lasso, box select)
-- Export/Import Enhancements (PNG, SVG)
-- Performance Optimizations for large graphs
-- Enhanced Controls Panel
+### 🎯 Use Cases
+- Data warehouse lineage documentation
+- Impact analysis for table changes
+- ETL pipeline visualization
+- Data governance and compliance
+- Understanding data transformations
+- Dependency tracking for migrations
 
 ## 📦 Tech Stack
 
 - **React 18** - UI Framework
 - **TypeScript** - Type Safety
-- **Vite 5** - Build Tool (compatible with Node.js 21.1.0)
+- **Vite 5** - Build Tool
 - **React Flow 11** - Graph Visualization Library (Free Version)
+- Custom layout engine with order-based positioning
 
 ## 🛠️ Installation
 
 ```bash
-# Install dependencies (use legacy-peer-deps for compatibility)
+# Clone the repository
+git clone https://github.com/vinodhramu/data-lineage-viewer.git
+cd data-lineage-viewer
+
+# Install dependencies
 npm install --legacy-peer-deps
 ```
 
